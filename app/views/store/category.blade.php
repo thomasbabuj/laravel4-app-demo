@@ -7,17 +7,17 @@
             <h1>The brand new MacBook Pro</h1>
             <p>With a special price, <span class="bold">today only!</span></p>
             <a href="#" class="secondary-btn">READ MORE</a>
-            <img src="img/macbook.png" alt="MacBook Pro">
+            {{ HTML::image('img/macbook.png', 'MacBook Pro') }}
         </div><!-- end promo1 -->
         <div id="promo2">
             <h2>The iPhone 5 is now<br>available in our store!</h2>
-            <a href="">Read more <img src="img/right-arrow.gif" alt="Read more"></a>
-            <img src="img/iphone.png" alt="iPhone">
+            <a href="">Read more {{ HTML::image('img/right-arrow.gif', 'Read more') }}</a>
+            {{ HTML::image('img/iphone.png', 'iPhone') }}
         </div><!-- end promo2 -->
         <div id="promo3">
-            <img src="img/thunderbolt.png" alt="Thunderbolt">
+            {{ HTML::image('img/thunderbolt.png', 'Thunderbolt') }}
             <h2>The 27"<br>Thunderbolt Display.<br>Simply Stunning.</h2>
-            <a href="#">Read more <img src="img/right-arrow.gif" alt="Read more" /></a>
+            <a href="#">Read more {{ HTML::image('img/right-arrow.gif', 'Read more') }}</a>
         </div><!-- end promo3 -->
     </section><!-- promo-alt -->
 
