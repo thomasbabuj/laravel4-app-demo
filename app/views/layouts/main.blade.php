@@ -87,6 +87,8 @@
 
                 @yield('promo')
 
+                @yield('search-keyword')
+
             <hr />
 
             <section id="main-content" class="clearfix">
