@@ -1,4 +1,4 @@
-@extends ('layots.main)
+@extends ('layots.main')
 
 @section ('content')
 
