@@ -32,7 +32,7 @@ class CategoriesController extends BaseController {
                     ->withInput();
     }
 
-    public function postDestory()
+    public function postDestroy()
     {
         $category = Category::find( Input::get('id'));
 
