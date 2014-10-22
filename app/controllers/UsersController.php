@@ -24,7 +24,7 @@ class UsersController extends BaseController {
             $user->lastname = Input::get('lastname');
             $user->email = Input::get('email');
             $user->password = Hash::make( Input::get('password') );
-            $user->telephone = Input::make('telephone');
+            $user->telephone = Input::get('telephone');
             $user->save();
 
             return Redirect::to('users/signin')
