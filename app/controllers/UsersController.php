@@ -48,10 +48,10 @@ class UsersController extends BaseController {
             'password' => Input::get('password')
         )))
         {
-            return View::make('/')->with('message', 'Thanks for signing in');
+            return Redirect::to('/')->with('message', 'Thanks for signing in');
         }
 
-        return View::make('users/signin')
+        return Redirect::to('users/signin')
                 ->with('message', 'Your email/password combo was incorrect');
     }
 
