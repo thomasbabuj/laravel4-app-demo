@@ -22,7 +22,7 @@
         @foreach($products as $product)
         <div class="product">
             <a href="/store/view/{{ $product->id }}">
-                {{ HTML::image('img/product.gif', $product->title, array('class' => 'feature', 'width' => '240', 'height'=> '127')) }}
+                {{ HTML::image( $product->image, $product->title, array('class' => 'feature', 'width' => '240', 'height'=> '127')) }}
             </a>
 
             <h3><a href="/store/view/{{ $product->id }}">{{ $product->title }}</a></h3>
