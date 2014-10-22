@@ -1,6 +1,7 @@
 @extends ('layouts.main')
 
 @section('search-keyword')
+    <hr />
     <section id="search-keyword">
         <h1>Search Results for <span>{{ $keyword }}</span></h1>
     </section><!-- end search-keyword -->
