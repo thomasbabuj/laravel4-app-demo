@@ -6,7 +6,7 @@
     <div id="new-account">
         <h1>Create New Account</h1>
 
-        @if ($erros->has() )
+        @if ($errors->has() )
             <div id="form-errors">
                 <p>The following erros have occured:</p>
                 <ul>
