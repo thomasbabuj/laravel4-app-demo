@@ -23,7 +23,7 @@ class StoreController extends BaseController {
     public function getCategory($cat_id)
     {
         return View::make('store.category')
-                ->with('products', Product::where('category_id', '=', $cat_id))->paginate(6)
+                ->with('products', Product::where('category_id', '=', $cat_id)->paginate(6))
                 ->with('category', Category::find($cat_id));
     }
 }
