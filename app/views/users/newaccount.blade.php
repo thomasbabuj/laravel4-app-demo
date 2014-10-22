@@ -10,7 +10,7 @@
             <div id="form-errors">
                 <p>The following erros have occured:</p>
                 <ul>
-                    @foreach ($errors->all as $error)
+                    @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
