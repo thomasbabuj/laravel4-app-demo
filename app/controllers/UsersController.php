@@ -17,7 +17,7 @@ class UsersController extends BaseController {
     {
         $validator = Validator::make(Input::all(), User::$rules);
 
-        if ( $validator )
+        if ( $validator->passes() )
         {
             $user = new User;
             $user->firstname = Input::get('firstname');
@@ -29,8 +29,7 @@ class UsersController extends BaseController {
 
             return Redirect::to('users/signin')
                     ->with('message', 'Thank you for creating a new account. Please sing in');
-        }
-
+        } 
         return Redirect::to('users/newaccount')
                 ->with('message', 'Something went wrong')
                 ->withErrors($validator)
