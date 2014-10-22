@@ -101,6 +101,8 @@
 
             <hr />
 
+            @yield('pagination')
+
             <footer>
                 <section id="contact">
                     <h3>For phone orders please call 1-800-000. You<br>can also email us at <a href="mailto:office@shop.com">office@shop.com</a></h3>
