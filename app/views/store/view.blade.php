@@ -7,7 +7,7 @@
     </div><!-- end product-image -->
     <div id="product-details">
         <h1>{{ $product->title }}</h1>
-        <p>{{ $prodcut->description }}</p>
+        <p>{{ $product->description }}</p>
 
         <hr />
 
