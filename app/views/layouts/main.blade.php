@@ -45,7 +45,7 @@
                     </nav>
 
                     <div id="search-form">
-                        {{ Form::open(array('url' => 'store/search'), 'method' => 'get')) }}
+                        {{ Form::open(array('url' => 'store/search', 'method' => 'get')) }}
                         {{ Form::text('keyword', NULL, array('placeholder' => 'Search by keyword', 'class' => 'search') }}
                         {{ Form::submit('Search', array('class' => 'search submit')) }}
                         {{ Form::close() }}
