@@ -52,31 +52,33 @@
                     </div><!-- end search-form -->
 
                     <div id="user-menu">
-                        
-                        <nav id="signin" class="dropdown">
-                            <ul>
-                                <li>
-                                    <a href="#">{{ HTML::image('img/user-icon.gif', 'Sign In') }}Sign In {{ HTML::image('img/down-arrow.gif') }}</a>
-                                    <ul>
-                                        <li><a href="#">Sign In</a></li>
-                                        <li><a href="#">Sign Up</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
 
-                        <!--
-                        <nav class="dropdown">
-                            <ul>
-                                <li>
-                                    <a href="#">{{ HTML::image('img/user-icon.gif', 'Thomas Babu') }} Thomas babu {{ HTML::image('img/down-arrow.gif', 'Thomas babu')}}</a>
-                                    <ul>
-                                        <li><a href="#">Order History</a></li>
-                                        <li><a href="#">Sign Out</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>-->
+                         @if ( Auth::check() )
+                            <nav class="dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="#">{{ HTML::image('img/user-icon.gif', Auth::user()->firstname) }} Auth::user()->firstname {{ HTML::image('img/down-arrow.gif', Auth::user()->firstname)}}</a>
+                                        <ul>
+                                            <li><a href="#">Order History</a></li>
+                                            <li>{{ HTML::link('users/signout', 'Sign Out') }}</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                         @else
+                           <nav id="signin" class="dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="#">{{ HTML::image('img/user-icon.gif', 'Sign In') }}Sign In {{ HTML::image('img/down-arrow.gif') }}</a>
+                                        <ul>
+                                            <li>{{ HTML::link('users/signin', 'Sign In') }}</li>
+                                            <li>{{ HTML::link('users/newaccount', 'Sign Up') }}</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                         @endif
+
                     </div><!-- end user-menu -->
 
                     <div id="view-cart">
@@ -116,8 +118,8 @@
                     <div id="my-account">
                         <h4>MY ACCOUNT</h4>
                         <ul>
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">Sign Up</a></li>
+                            <li>{{ HTML::link('users/signin', 'Sign In') }}</li>
+                            <li>{{ HTML::link('users/newaccount', 'Sign Up') }}</li>
                             <li><a href="#">Order History</a></li>
                             <li><a href="#">Shopping Cart</a></li>
                         </ul>
